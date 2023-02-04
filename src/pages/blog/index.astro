@@ -14,9 +14,9 @@ const posts = (await getCollection("blog")).sort(
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="bg-primary-50">
+  <body>
     <Header />
-    <main class="container mx-auto py-4 px-8 space-y-5 text-primary-900">
+    <main class="container mx-auto py-4 px-8 space-y-5">
       <section>
         <ul class="list-disc">
           {
@@ -28,7 +28,10 @@ const posts = (await getCollection("blog")).sort(
                 >
                   {post.data.title}
                 </a>
-                <time datetime={post.data.pubDate.toISOString()} class="italic font-thin">
+                <time
+                  datetime={post.data.pubDate.toISOString()}
+                  class="italic font-thin"
+                >
                   {post.data.pubDate.toLocaleDateString("en-us", {
                     year: "numeric",
                     month: "short",

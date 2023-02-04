@@ -15,8 +15,8 @@ const { title, description, pubDate, updatedDate } = Astro.props;
 
   <body>
     <Header />
-    <main class="container mx-auto py-4 px-8 text-primary-900">
-      <article class="space-y-2">
+    <main class="container mx-auto py-4 px-8">
+      <article class="space-y-4">
         <p class="text-2xl">{title}</p>
         {pubDate && <time class="italic font-thin">{pubDate}</time>}
         {
@@ -26,7 +26,7 @@ const { title, description, pubDate, updatedDate } = Astro.props;
             </div>
           )
         }
-        <!-- <hr /> -->
+
         <div class="prose">
           <slot />
         </div>
