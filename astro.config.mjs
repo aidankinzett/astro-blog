@@ -20,6 +20,6 @@ export default defineConfig({
       ],
     ],
   },
-  site: "https://astro.aidankinzett.com",
+  site: "https://aidankinzett.com",
   integrations: [mdx(), sitemap(), tailwind()],
 });
