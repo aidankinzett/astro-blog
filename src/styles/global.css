@@ -34,3 +34,12 @@
     font-family: BerkleyMono, monospace;
   }
 }
+
+.table-of-contents::before {
+  content: "Contents";
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  line-height: 1.33333333;
+}
