@@ -4,25 +4,25 @@ import HeaderLink from "./HeaderLink.astro";
 
 <header>
   <nav>
-    <div
-      class="flex align-baseline justify-between rounded border p-4 bg-gray-100"
-    >
-      <div>
-        <HeaderLink href="/">Home</HeaderLink>
-        <HeaderLink href="/blog">Blog</HeaderLink>
-        <HeaderLink href="/about">About</HeaderLink>
-      </div>
-      <div>
-        <HeaderLink
-          href="https://hachyderm.io/@aidankinzett"
-          target="_blank"
-          rel="me"
-        >
-          Mastodon
-        </HeaderLink>
-        <HeaderLink href="https://github.com/aidankinzett" target="_blank">
-          GitHub
-        </HeaderLink>
+    <div class="bg-celeste p-10 flex justify-center w-full">
+      <div class="flex align-baseline justify-between max-w-screen-md w-full">
+        <div>
+          <HeaderLink href="/">Home</HeaderLink>
+          <HeaderLink href="/blog">Blog</HeaderLink>
+          <HeaderLink href="/about">About</HeaderLink>
+        </div>
+        <div>
+          <HeaderLink
+            href="https://hachyderm.io/@aidankinzett"
+            target="_blank"
+            rel="me"
+          >
+            Mastodon
+          </HeaderLink>
+          <HeaderLink href="https://github.com/aidankinzett" target="_blank">
+            GitHub
+          </HeaderLink>
+        </div>
       </div>
     </div>
   </nav>
