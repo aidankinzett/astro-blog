@@ -7,6 +7,9 @@ import { defineConfig } from "astro/config";
 import compress from "astro-compress";
 
 // https://astro.build/config
+import robotsTxt from "astro-robots-txt";
+
+// https://astro.build/config
 export default defineConfig({
   markdown: {
     rehypePlugins: ["rehype-slug", "rehype-external-links", ["rehype-toc", {
@@ -17,5 +20,5 @@ export default defineConfig({
     }]]
   },
   site: "https://aidankinzett.com",
-  integrations: [mdx(), sitemap(), tailwind(), compress()]
+  integrations: [mdx(), sitemap(), tailwind(), compress(), robotsTxt()]
 });
