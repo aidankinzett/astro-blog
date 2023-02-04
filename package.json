@@ -16,6 +16,7 @@
     "@astrojs/sitemap": "^1.0.1",
     "@astrojs/tailwind": "^3.0.1",
     "astro": "^2.0.6",
+    "astro-compress": "^1.1.29",
     "markdown-it": "^13.0.1",
     "rehype-external-links": "^2.0.1",
     "rehype-slug": "^5.1.0",
