@@ -13,7 +13,7 @@ const { title, description, pubDate, updatedDate } = Astro.props;
     <BaseHead title={title} description={description} />
   </head>
 
-  <body>
+  <body class="dark:bg-primary-900 dark:text-primary-50">
     <Header />
     <main class="container mx-auto py-4 px-8">
       <article class="space-y-4">
@@ -27,7 +27,7 @@ const { title, description, pubDate, updatedDate } = Astro.props;
           )
         }
 
-        <div class="prose">
+        <div class="prose dark:prose-invert">
           <slot />
         </div>
       </article>
