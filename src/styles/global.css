@@ -29,4 +29,8 @@
   html {
     font-family: BerkleyMono, monospace;
   }
+
+  code {
+    font-family: BerkleyMono, monospace;
+  }
 }

@@ -10,9 +10,9 @@ import { SITE_DESCRIPTION,SITE_TITLE } from "../consts";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="bg-primary-50">
-    <Header title={SITE_TITLE} />
-    <main>
-      <div class="container mx-auto py-4 px-8 space-y-5 text-primary-900">
+    <Header />
+    <main class="container mx-auto py-4 px-8 text-primary-900">
+      <div class="space-y-5">
         <div>
           <p class="text-md font-thin">Hello, I'm</p>
           <p class="text-xl">Aidan Kinzett 👋</p>
@@ -25,7 +25,11 @@ import { SITE_DESCRIPTION,SITE_TITLE } from "../consts";
 
         <div>
           <p class="text-md font-thin">at</p>
-          <p class="text-xl"><a href="https://labrys.io" class="underline-offset-4 underline">Labrys</a> 🏢</p>
+          <p class="text-xl">
+            <a href="https://labrys.io" class="underline-offset-4 underline"
+              >Labrys</a
+            > 🏢
+          </p>
         </div>
       </div>
     </main>
