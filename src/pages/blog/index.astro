@@ -7,6 +7,9 @@ import { SITE_DESCRIPTION,SITE_TITLE } from "../../consts";
 const posts = (await getCollection("blog")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
+
+import { Icon } from 'astro-icon';
+
 ---
 
 <!DOCTYPE html>
@@ -17,6 +20,10 @@ const posts = (await getCollection("blog")).sort(
   <body>
     <Header />
     <main class="container mx-auto py-4 px-8 space-y-5">
+      <a href="/rss.xml" class="flex items-center space-x-1 hover:text-orange-500 hover:cursor-pointer">
+        <div>RSS</div>
+        <Icon pack="mdi" name="rss-box" class="h-5 w-5" />
+      </a>
       <section>
         <ul class="list-disc">
           {
