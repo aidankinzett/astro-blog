@@ -9,14 +9,14 @@ import HeaderLink from "./HeaderLink.astro";
       class="bg-primary-200 p-10 flex justify-center w-full border-b-black border-b-2"
     >
       <div
-        class="flex flex-col sm:flex-row space-y-4 align-baseline justify-between max-w-screen-md w-full text-black"
+        class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 align-baseline justify-between max-w-screen-md w-full text-black"
       >
         <div class="space-x-4">
           <HeaderLink href="/">Home</HeaderLink>
           <HeaderLink href="/blog">Blog</HeaderLink>
           <HeaderLink href="/about">About</HeaderLink>
         </div>
-        <div class="space-x-2">
+        <div class="space-x-2 flex-row flex align-top">
           <HeaderLink
             href="https://hachyderm.io/@aidankinzett"
             target="_blank"
