@@ -36,24 +36,27 @@ const posts = (await getCollection("blog")).sort(
         <ul class="space-y-8">
           {
             posts.map((post) => (
-              <li class=" bg-primary-50 dark:bg-primary-900 border-black border-2 dark:border-white p-4">
-                <a
-                  href={`/blog/${post.slug}/`}
-                  class="underline underline-offset-4"
-                >
-                  {post.data.title}
+              <li class=" bg-primary-50 hover:bg-primary-100 dark:hover:bg-primary-800 dark:bg-primary-900 border-black border-2 dark:border-white ">
+                <a href={`/blog/${post.slug}/`}>
+                  <div class="p-4 hover:cursor-pointer">
+                    <div class="underline underline-offset-4">
+                      {post.data.title}
+                    </div>
+                    <time
+                      datetime={post.data.pubDate.toISOString()}
+                      class="font-thin"
+                    >
+                      {post.data.pubDate.toLocaleDateString("en-us", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </time>
+                    <div class="prose dark:prose-invert">
+                      {post.data.description}
+                    </div>
+                  </div>
                 </a>
-                <time
-                  datetime={post.data.pubDate.toISOString()}
-                  class="font-thin"
-                >
-                  {post.data.pubDate.toLocaleDateString("en-us", {
-                    year: "numeric",
-                    month: "short",
-                    day: "numeric",
-                  })}
-                </time>
-                <div class="prose dark:prose-invert">{post.data.description}</div>
               </li>
             ))
           }
