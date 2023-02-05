@@ -14,6 +14,7 @@ const blog = defineCollection({
       .string()
       .optional()
       .transform((str) => (str ? new Date(str) : undefined)),
+    toc: z.boolean().default(false).optional(),
   }),
 });
 
