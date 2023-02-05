@@ -36,7 +36,7 @@ const posts = (await getCollection("blog")).sort(
         <ul class="space-y-8">
           {
             posts.map((post) => (
-              <li class=" bg-primary-50 border-black border-2 p-4">
+              <li class=" bg-primary-50 dark:bg-primary-900 border-black border-2 dark:border-white p-4">
                 <a
                   href={`/blog/${post.slug}/`}
                   class="underline underline-offset-4"
@@ -53,7 +53,7 @@ const posts = (await getCollection("blog")).sort(
                     day: "numeric",
                   })}
                 </time>
-                <div class="prose">{post.data.description}</div>
+                <div class="prose dark:prose-invert">{post.data.description}</div>
               </li>
             ))
           }
