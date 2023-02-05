@@ -17,3 +17,7 @@ I am a Typescript and React/Next.js developer.
 - Typescript
 - React Frameworks
 - Recently I have been looking into the fediverse
+
+### Contact
+
+You can reach me on [Mastodon](https://hachyderm.io/@aidankinzett) or by email at [hello@aidankinzett.com](mailto:hello@aidankinzett.com).
