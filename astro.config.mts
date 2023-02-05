@@ -12,20 +12,37 @@ import robotsTxt from "astro-robots-txt";
 // https://astro.build/config
 import partytown from "@astrojs/partytown";
 
+import rehypeExternalLinks from "rehype-external-links";
+import rehypeSlug from "rehype-slug";
+import rehypeToc from "rehype-toc";
+
 // https://astro.build/config
 
 // https://astro.build/config
 export default defineConfig({
   markdown: {
-    rehypePlugins: ["rehype-slug", "rehype-external-links", ["rehype-toc", {
-      headings: ["h1", "h2"],
-     
-    }]]
+    rehypePlugins: [
+      rehypeSlug,
+      rehypeExternalLinks,
+      [
+        rehypeToc as any,
+        {
+          headings: ["h1", "h2"],
+        },
+      ],
+    ],
   },
   site: "https://aidankinzett.com",
-  integrations: [mdx(), sitemap(), tailwind(), compress(), robotsTxt(), partytown({
-    config: {
-      forward: ["dataLayer.push"]
-    }
-  })]
+  integrations: [
+    mdx(),
+    sitemap(),
+    tailwind(),
+    compress(),
+    robotsTxt(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),
+  ],
 });
