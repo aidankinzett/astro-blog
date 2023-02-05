@@ -28,11 +28,32 @@ if (!title) {
         </div>
 
         <div class="container mx-auto mt-5 py-4 px-10">
-          {pubDate && <time class="font-thin">{pubDate}</time>}
+          {
+            pubDate && (
+              <time class="font-thin">
+                {typeof pubDate === "string"
+                  ? pubDate
+                  : pubDate.toLocaleDateString("en-us", {
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                    })}
+              </time>
+            )
+          }
           {
             updatedDate && (
-              <div>
-                Last updated on <time>{updatedDate}</time>
+              <div class="font-light">
+                Last updated on{" "}
+                <time>
+                  {typeof updatedDate === "string"
+                    ? updatedDate
+                    : updatedDate.toLocaleDateString("en-us", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                </time>
               </div>
             )
           }
