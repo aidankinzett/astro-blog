@@ -34,6 +34,9 @@ module.exports = {
       colors: {
         primary: colors["forest-green"],
       },
+      container: {
+        center: true,
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
