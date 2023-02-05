@@ -2,6 +2,7 @@
 import BaseHead from "../../components/BaseHead.astro";
 import { SITE_DESCRIPTION,SITE_TITLE } from "../../consts";
 
+import { SEO } from "astro-seo";
 import BaseLayout from "../../components/BaseLayout.astro";
 import BlogPostList from "../../components/BlogPostList.astro";
 import RssLink from "../../components/RssLink.astro";
@@ -9,6 +10,27 @@ import RssLink from "../../components/RssLink.astro";
 
 <BaseLayout>
   <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} slot="head" />
+
+  <SEO
+    slot="head"
+    openGraph={{
+      basic: {
+        title: SITE_TITLE,
+        image: "https://aidankinzett.com/default-og.png",
+        type: "article",
+      },
+      image: {
+        alt: SITE_TITLE,
+      },
+    }}
+    twitter={{
+      image: "https://aidankinzett.com/default-og.png",
+      imageAlt: SITE_TITLE,
+      description: SITE_DESCRIPTION,
+      title: SITE_TITLE,
+    }}
+  />
+
   <div slot="beneath-header">
     <p class="text-2xl">My Blog</p>
     <RssLink />

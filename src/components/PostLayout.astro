@@ -24,8 +24,6 @@ const tocDisplay = toc ? "initial" : "none";
   {
     og ? (
       <SEO
-        title={title}
-        description={description}
         slot="head"
         openGraph={{
           basic: {
@@ -33,9 +31,43 @@ const tocDisplay = toc ? "initial" : "none";
             image: og,
             type: "article",
           },
+          image: {
+            alt: title,
+          },
+          article: {
+            publishedTime: pubDate.toISOString(),
+            modifiedTime: updatedDate?.toISOString(),
+            authors: ["Aidan Kinzett"],
+          },
+        }}
+        twitter={{
+          image: og,
+          imageAlt: title,
+          description,
+          title,
         }}
       />
-    ) : null
+    ) : (
+      <SEO
+        slot="head"
+        openGraph={{
+          basic: {
+            title,
+            image: "https://aidankinzett.com/default-og.png",
+            type: "article",
+          },
+          image: {
+            alt: title,
+          },
+        }}
+        twitter={{
+          image: "https://aidankinzett.com/default-og.png",
+          imageAlt: title,
+          description,
+          title,
+        }}
+      />
+    )
   }
 
   <div slot="beneath-header">

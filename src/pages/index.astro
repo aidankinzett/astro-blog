@@ -1,4 +1,5 @@
 ---
+import { SEO } from "astro-seo";
 import BaseHead from "../components/BaseHead.astro";
 import BaseLayout from "../components/BaseLayout.astro";
 import HomePageText from "../components/HomePageText.astro";
@@ -7,6 +8,26 @@ import { SITE_DESCRIPTION,SITE_TITLE } from "../consts";
 
 <BaseLayout>
   <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} slot="head" />
+
+  <SEO
+    slot="head"
+    openGraph={{
+      basic: {
+        title: SITE_TITLE,
+        image: "https://aidankinzett.com/default-og.png",
+        type: "article",
+      },
+      image: {
+        alt: SITE_TITLE,
+      },
+    }}
+    twitter={{
+      image: "https://aidankinzett.com/default-og.png",
+      imageAlt: SITE_TITLE,
+      description: SITE_DESCRIPTION,
+      title: SITE_TITLE,
+    }}
+  />
 
   <div class="space-y-5">
     <HomePageText>
@@ -20,8 +41,9 @@ import { SITE_DESCRIPTION,SITE_TITLE } from "../consts";
     <HomePageText>
       <span slot="small">at</span>
       <span slot="big"
-        ><a href="https://labrys.io" class="underline-offset-4 underline dark:text-primary-200"
-          >Labrys</a
+        ><a
+          href="https://labrys.io"
+          class="underline-offset-4 underline dark:text-primary-200">Labrys</a
         > 🏢</span
       >
     </HomePageText>
