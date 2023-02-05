@@ -21,6 +21,9 @@ import rehypeToc from "rehype-toc";
 import prefetch from "@astrojs/prefetch";
 
 // https://astro.build/config
+import critters from "astro-critters";
+
+// https://astro.build/config
 export default defineConfig({
   markdown: {
     rehypePlugins: [rehypeSlug, rehypeExternalLinks, [(rehypeToc as any), {
@@ -32,5 +35,5 @@ export default defineConfig({
     config: {
       forward: ["dataLayer.push"]
     }
-  }), prefetch()]
+  }), prefetch(), critters()]
 });
