@@ -13,6 +13,18 @@ const colors = {
     800: "#175973",
     900: "#184961",
   },
+  "forest-green": {
+    50: "#f0fdf0",
+    100: "#dbfddc",
+    200: "#b9f9bc",
+    300: "#83f288",
+    400: "#46e24e",
+    500: "#1bb823",
+    600: "#12a71a",
+    700: "#128318",
+    800: "#146719",
+    900: "#125518",
+  },
 };
 
 module.exports = {
@@ -20,7 +32,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: colors["blue-chill"],
+        primary: colors["forest-green"],
       },
     },
   },
