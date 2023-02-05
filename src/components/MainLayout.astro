@@ -1,0 +1,66 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { title, description, pubDate, updatedDate } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+
+  <body class="dark:bg-black dark:text-primary-50">
+    <Header />
+    <main>
+      <article>
+        <div
+          class="bg-primary-200 dark:bg-primary-800 border-b-black dark:border-b-white border-b-2 space-y-4"
+        >
+          <div class="container max-w-screen-md mx-auto py-16 px-10">
+            <p class="text-2xl">{title}</p>
+            {
+              pubDate && (
+                <time class="font-thin">
+                  {typeof pubDate === "string"
+                    ? pubDate
+                    : pubDate.toLocaleDateString("en-us", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                </time>
+              )
+            }
+            {
+              updatedDate && (
+                <div class="font-light">
+                  Last updated on{" "}
+                  <time>
+                    {typeof updatedDate === "string"
+                      ? updatedDate
+                      : updatedDate.toLocaleDateString("en-us", {
+                          year: "numeric",
+                          month: "short",
+                          day: "numeric",
+                        })}
+                  </time>
+                </div>
+              )
+            }
+            <p>By Aidan Kinzett</p>
+          </div>
+        </div>
+
+        <div class="container max-w-screen-md mx-auto mt-5 py-4 px-10">
+          <div class="prose dark:prose-invert">
+            <slot />
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
