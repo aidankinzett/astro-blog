@@ -5,11 +5,13 @@
 import type { CollectionEntry } from "astro:content";
 import PostLayout from "../components/PostLayout.astro";
 
-type Props = CollectionEntry<"blog">["data"];
+type Props = CollectionEntry<"blog">["data"] & {
+  og?: string;
+}
 
-const { title, description, pubDate, updatedDate, toc } = Astro.props;
+const { title, description, pubDate, updatedDate, toc, og } = Astro.props;
 ---
 
-<PostLayout {...{title, description, pubDate, updatedDate, toc}}>
+<PostLayout {...{title, description, pubDate, updatedDate, toc, og}}>
   <slot />
 </PostLayout>

@@ -1,12 +1,15 @@
 ---
+import { SEO } from "astro-seo";
 import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE } from "../consts";
 import BaseLayout from "./BaseLayout.astro";
 
-type Props = CollectionEntry<"blog">["data"];
+type Props = CollectionEntry<"blog">["data"] & {
+  og?: string;
+};
 
-const { title, description, pubDate, updatedDate, toc } = Astro.props;
+const { title, description, pubDate, updatedDate, toc, og } = Astro.props;
 
 const tocDisplay = toc ? "initial" : "none";
 ---
@@ -17,6 +20,23 @@ const tocDisplay = toc ? "initial" : "none";
     description={description}
     slot="head"
   />
+
+  {
+    og ? (
+      <SEO
+        title={title}
+        description={description}
+        slot="head"
+        openGraph={{
+          basic: {
+            title,
+            image: og,
+            type: "article",
+          },
+        }}
+      />
+    ) : null
+  }
 
   <div slot="beneath-header">
     <p class="text-2xl">{title}</p>
