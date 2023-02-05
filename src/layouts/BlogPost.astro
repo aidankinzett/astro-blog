@@ -5,7 +5,11 @@ import Header from "../components/Header.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate } = Astro.props;
+let { title, description, pubDate, updatedDate } = Astro.props;
+
+if (!title) {
+  ({ title, description, pubDate, updatedDate } = Astro.props.frontmatter);
+}
 ---
 
 <html lang="en">
@@ -15,20 +19,26 @@ const { title, description, pubDate, updatedDate } = Astro.props;
 
   <body class="dark:bg-primary-900 dark:text-primary-50">
     <Header />
-    <main class="container mx-auto py-4 px-8">
-      <article class="space-y-4">
-        <p class="text-2xl">{title}</p>
-        {pubDate && <time class="italic font-thin">{pubDate}</time>}
-        {
-          updatedDate && (
-            <div>
-              Last updated on <time>{updatedDate}</time>
-            </div>
-          )
-        }
+    <main>
+      <article>
+        <div class="bg-primary-200 border-b-black border-b-2 space-y-4">
+          <div class="container mx-auto py-16 px-10">
+            <p class="text-2xl">{title}</p>
+          </div>
+        </div>
 
-        <div class="prose dark:prose-invert">
-          <slot />
+        <div class="container mx-auto mt-5 py-4 px-10">
+          {pubDate && <time class="font-thin">{pubDate}</time>}
+          {
+            updatedDate && (
+              <div>
+                Last updated on <time>{updatedDate}</time>
+              </div>
+            )
+          }
+          <div class="prose dark:prose-invert">
+            <slot />
+          </div>
         </div>
       </article>
     </main>
