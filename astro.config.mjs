@@ -13,6 +13,9 @@ import robotsTxt from "astro-robots-txt";
 import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
+import critters from "astro-critters";
+
+// https://astro.build/config
 export default defineConfig({
   markdown: {
     rehypePlugins: ["rehype-slug", "rehype-external-links", ["rehype-toc", {
@@ -27,5 +30,5 @@ export default defineConfig({
     config: {
       forward: ["dataLayer.push"]
     }
-  })]
+  }), critters()]
 });
