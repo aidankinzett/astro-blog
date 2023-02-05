@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = 'Aidan Kinzett';
 export const SITE_DESCRIPTION = 'My personal website.';
+export const SITE_URL = 'https://aidankinzett.com';

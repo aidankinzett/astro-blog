@@ -22,18 +22,35 @@ import prefetch from "@astrojs/prefetch";
 
 // https://astro.build/config
 import critters from "astro-critters";
+import { SITE_URL } from "./src/consts";
 
 // https://astro.build/config
 export default defineConfig({
   markdown: {
-    rehypePlugins: [rehypeSlug, rehypeExternalLinks, [(rehypeToc as any), {
-      headings: ["h1", "h2"]
-    }]]
+    rehypePlugins: [
+      rehypeSlug,
+      rehypeExternalLinks,
+      [
+        rehypeToc as any,
+        {
+          headings: ["h1", "h2"],
+        },
+      ],
+    ],
   },
-  site: "https://aidankinzett.com",
-  integrations: [mdx(), sitemap(), tailwind(), compress(), robotsTxt(), partytown({
-    config: {
-      forward: ["dataLayer.push"]
-    }
-  }), prefetch(), critters()]
+  site: SITE_URL,
+  integrations: [
+    mdx(),
+    sitemap(),
+    tailwind(),
+    compress(),
+    robotsTxt(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),
+    prefetch(),
+    critters(),
+  ],
 });
