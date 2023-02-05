@@ -1,12 +1,12 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import MainLayout from "../components/MainLayout.astro";
+import PostLayout from "../components/PostLayout.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
 const { title, description, pubDate, updatedDate } = Astro.props.frontmatter;
 ---
 
-<MainLayout {...{title, description, pubDate, updatedDate}}>
+<PostLayout {...{title, description, pubDate, updatedDate}}>
   <slot />
-</MainLayout>
+</PostLayout>

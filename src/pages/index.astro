@@ -1,39 +1,30 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
+import BaseLayout from "../components/BaseLayout.astro";
 import { SITE_DESCRIPTION,SITE_TITLE } from "../consts";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body class="dark:bg-black">
-    <Header />
-    <main
-      class="container max-w-screen-md mx-auto py-16 px-10 dark:text-primary-50"
-    >
-      <div class="space-y-5">
-        <div>
-          <p class="text-md font-thin">Hello, I'm</p>
-          <p class="text-xl">Aidan Kinzett 👋</p>
-        </div>
+<BaseLayout>
+  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} slot="head" />
 
-        <div>
-          <p class="text-md font-thin">I work as a</p>
-          <p class="text-xl">Tech Lead 👨‍💻</p>
-        </div>
+  <div class="space-y-5">
+    <div>
+      <p class="text-md font-thin">Hello, I'm</p>
+      <p class="text-xl">Aidan Kinzett 👋</p>
+    </div>
 
-        <div>
-          <p class="text-md font-thin">at</p>
-          <p class="text-xl">
-            <a href="https://labrys.io" class="underline-offset-4 underline"
-              >Labrys</a
-            > 🏢
-          </p>
-        </div>
-      </div>
-    </main>
-  </body>
-</html>
+    <div>
+      <p class="text-md font-thin">I work as a</p>
+      <p class="text-xl">Tech Lead 👨‍💻</p>
+    </div>
+
+    <div>
+      <p class="text-md font-thin">at</p>
+      <p class="text-xl">
+        <a href="https://labrys.io" class="underline-offset-4 underline"
+          >Labrys</a
+        > 🏢
+      </p>
+    </div>
+  </div>
+</BaseLayout>
