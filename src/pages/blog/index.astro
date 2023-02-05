@@ -1,57 +1,20 @@
 ---
-import { getCollection } from "astro:content";
 import BaseHead from "../../components/BaseHead.astro";
 import { SITE_DESCRIPTION,SITE_TITLE } from "../../consts";
 
-import { Icon } from "astro-icon";
 import BaseLayout from "../../components/BaseLayout.astro";
-
-const posts = (await getCollection("blog")).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+import BlogPostList from "../../components/BlogPostList.astro";
+import RssLink from "../../components/RssLink.astro";
 ---
 
 <BaseLayout>
   <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} slot="head" />
   <div slot="beneath-header">
     <p class="text-2xl">My Blog</p>
-    <a
-      href="/rss.xml"
-      class="flex items-center space-x-1 hover:text-orange-500 hover:cursor-pointer"
-    >
-      <div>RSS</div>
-      <Icon pack="mdi" name="rss-box" class="h-5 w-5" />
-    </a>
+    <RssLink />
   </div>
 
   <section>
-    <ul class="space-y-8">
-      {
-        posts.map((post) => (
-          <li class=" bg-primary-50 hover:bg-primary-100 dark:hover:bg-primary-800 dark:bg-primary-900 border-black border-2 dark:border-white ">
-            <a href={`/blog/${post.slug}/`}>
-              <div class="p-4 hover:cursor-pointer">
-                <div class="underline underline-offset-4">
-                  {post.data.title}
-                </div>
-                <time
-                  datetime={post.data.pubDate.toISOString()}
-                  class="font-thin"
-                >
-                  {post.data.pubDate.toLocaleDateString("en-us", {
-                    year: "numeric",
-                    month: "short",
-                    day: "numeric",
-                  })}
-                </time>
-                <div class="prose dark:prose-invert">
-                  {post.data.description}
-                </div>
-              </div>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+    <BlogPostList />
   </section>
 </BaseLayout>

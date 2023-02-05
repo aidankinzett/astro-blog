@@ -1,0 +1,21 @@
+---
+import { getCollection } from "astro:content";
+import BlogPostCard from "./BlogPostCard.astro";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<ul class="space-y-8">
+  {
+    posts.map((post) => (
+      <BlogPostCard
+        slug={post.slug}
+        title={post.data.title}
+        pubDate={post.data.pubDate}
+        description={post.data.description}
+      />
+    ))
+  }
+</ul>

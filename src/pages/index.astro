@@ -1,6 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import BaseLayout from "../components/BaseLayout.astro";
+import HomePageText from "../components/HomePageText.astro";
 import { SITE_DESCRIPTION,SITE_TITLE } from "../consts";
 ---
 
@@ -8,23 +9,21 @@ import { SITE_DESCRIPTION,SITE_TITLE } from "../consts";
   <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} slot="head" />
 
   <div class="space-y-5">
-    <div>
-      <p class="text-md font-thin">Hello, I'm</p>
-      <p class="text-xl">Aidan Kinzett 👋</p>
-    </div>
-
-    <div>
-      <p class="text-md font-thin">I work as a</p>
-      <p class="text-xl">Tech Lead 👨‍💻</p>
-    </div>
-
-    <div>
-      <p class="text-md font-thin">at</p>
-      <p class="text-xl">
-        <a href="https://labrys.io" class="underline-offset-4 underline"
+    <HomePageText>
+      <span slot="small">Hello, I'm</span>
+      <span slot="big">Aidan Kinzett 👋</span>
+    </HomePageText>
+    <HomePageText>
+      <span slot="small">I work as a</span>
+      <span slot="big">Tech Lead 👨‍💻</span>
+    </HomePageText>
+    <HomePageText>
+      <span slot="small">at</span>
+      <span slot="big"
+        ><a href="https://labrys.io" class="underline-offset-4 underline"
           >Labrys</a
-        > 🏢
-      </p>
-    </div>
+        > 🏢</span
+      >
+    </HomePageText>
   </div>
 </BaseLayout>
