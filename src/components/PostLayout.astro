@@ -44,5 +44,7 @@ const { title, description, pubDate, updatedDate } = Astro.props;
     }
     <p>By Aidan Kinzett</p>
   </div>
-  <slot />
+  <div class="prose dark:prose-invert">
+    <slot />
+  </div>
 </BaseLayout>
