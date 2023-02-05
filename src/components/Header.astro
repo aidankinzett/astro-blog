@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon";
 import HeaderLink from "./HeaderLink.astro";
 ---
 
@@ -8,23 +9,32 @@ import HeaderLink from "./HeaderLink.astro";
       class="bg-primary-200 p-10 flex justify-center w-full border-b-black border-b-2"
     >
       <div
-        class="flex flex-col sm:flex-row space-y-2 align-baseline justify-between max-w-screen-md w-full text-black"
+        class="flex flex-col sm:flex-row space-y-4 align-baseline justify-between max-w-screen-md w-full text-black"
       >
         <div class="space-x-4">
           <HeaderLink href="/">Home</HeaderLink>
           <HeaderLink href="/blog">Blog</HeaderLink>
           <HeaderLink href="/about">About</HeaderLink>
         </div>
-        <div class="space-x-4">
+        <div class="space-x-2">
           <HeaderLink
             href="https://hachyderm.io/@aidankinzett"
             target="_blank"
             rel="me"
           >
-            Mastodon
+            <Icon pack="mdi" name="mastodon" size="24" />
           </HeaderLink>
           <HeaderLink href="https://github.com/aidankinzett" target="_blank">
-            GitHub
+            <Icon pack="mdi" name="github" size="24" />
+          </HeaderLink>
+          <HeaderLink
+            href="https://www.linkedin.com/in/aidan-kinzett-830b25149/"
+            target="_blank"
+          >
+            <Icon pack="mdi" name="linkedin" size="24" />
+          </HeaderLink>
+          <HeaderLink href="mailto:hello@aidankinzett.com" target="_blank">
+            <Icon pack="mdi" name="email" size="24" />
           </HeaderLink>
         </div>
       </div>
