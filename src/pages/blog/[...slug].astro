@@ -1,5 +1,6 @@
 ---
 import { CollectionEntry,getCollection } from "astro:content";
+import config from "../../../astro.config.mjs";
 import BlogPost from "../../layouts/BlogPost.astro";
 
 export async function getStaticPaths() {
@@ -15,6 +16,6 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<BlogPost {...post.data} og={`/og/blog/${post.slug}.png`}>
+<BlogPost {...post.data} og={`${config.site}/og/blog/${post.slug}.png`}>
   <Content />
 </BlogPost>
