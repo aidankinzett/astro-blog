@@ -7,11 +7,11 @@ import Header from "./Header.astro";
   <head>
     <slot name="head" />
   </head>
-  <body class="dark:bg-black dark:text-primary-50">
+  <body>
     <Header />
     {
       Astro.slots["beneath-header"] && (
-        <div class="bg-primary-200 dark:bg-primary-800 border-b-black dark:border-b-white border-b-2 space-y-4">
+        <div class="bg-primary-200  border-b-black border-b-2 space-y-4">
           <div class="container max-w-screen-md mx-auto py-16 px-10">
             <slot name="beneath-header" />
           </div>
