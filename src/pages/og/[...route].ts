@@ -38,6 +38,7 @@ export const { getStaticPaths, get } = OGImageRoute({
     font: {
       title: {
         families: ["BerkleyMono", "monospaced"],
+        weight: "Bold",
         color: [0, 0, 0],
       },
       description: {
