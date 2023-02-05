@@ -11,6 +11,7 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, "");
   href={href}
   class:list={[className, "underline-offset-4", { active: isActive }]}
   {...props}
+  rel="prefetch"
 >
   <slot />
 </a>
