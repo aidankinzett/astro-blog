@@ -35,6 +35,10 @@ module.exports = {
         primary: colors["forest-green"],
       },
     },
+    fontFamily: {
+      body: "BerkleyMono, monospace",
+      sans: "BerkleyMono, monospace"
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };
