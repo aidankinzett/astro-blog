@@ -1,10 +1,8 @@
 ---
-import { getCollection } from "astro:content";
+import getBlogCollection from "../lib/getBlogCollection";
 import BlogPostCard from "./BlogPostCard.astro";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+const posts = await getBlogCollection();
 ---
 
 <ul class="space-y-8">
