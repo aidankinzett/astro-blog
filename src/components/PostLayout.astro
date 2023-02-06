@@ -24,6 +24,8 @@ const tocDisplay = toc ? "initial" : "none";
   {
     og ? (
       <SEO
+        title={`${title} | ${SITE_TITLE}`}
+        description={description}
         charset="utf-8"
         slot="head"
         openGraph={{
@@ -50,6 +52,8 @@ const tocDisplay = toc ? "initial" : "none";
       />
     ) : (
       <SEO
+        title={`${title} | ${SITE_TITLE}`}
+        description={description}
         charset="utf-8"
         slot="head"
         openGraph={{
