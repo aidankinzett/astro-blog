@@ -1,6 +1,5 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { SITE_URL } from "../../consts";
 import BlogPost from "../../layouts/BlogPost.astro";
 import getBlogCollection from "../../lib/getBlogCollection";
 
@@ -17,6 +16,6 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<BlogPost {...post.data} og={`${SITE_URL}/og/blog/${post.slug}.png`}>
+<BlogPost {...post.data}>
   <Content />
 </BlogPost>

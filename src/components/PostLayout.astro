@@ -5,10 +5,10 @@ import { SITE_TITLE } from "../consts";
 import BaseLayout from "./BaseLayout.astro";
 
 type Props = CollectionEntry<"blog">["data"] & {
-  og?: string;
+  ogImage?: string;
 };
 
-const { title, description, pubDate, updatedDate, toc, og } = Astro.props;
+const { title, description, pubDate, updatedDate, toc, ogImage } = Astro.props;
 
 const tocDisplay = toc ? "initial" : "none";
 ---
@@ -17,6 +17,7 @@ const tocDisplay = toc ? "initial" : "none";
   <BaseHead
     title={`${title} | ${SITE_TITLE}`}
     description={description}
+    ogImage={ogImage}
     slot="head"
   />
 

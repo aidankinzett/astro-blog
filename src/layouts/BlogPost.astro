@@ -9,9 +9,9 @@ type Props = CollectionEntry<"blog">["data"] & {
   og?: string;
 }
 
-const { title, description, pubDate, updatedDate, toc, og } = Astro.props;
+const { title, description, pubDate, updatedDate, toc, ogImage } = Astro.props;
 ---
 
-<PostLayout {...{title, description, pubDate, updatedDate, toc, og}}>
+<PostLayout {...{title, description, pubDate, updatedDate, toc, ogImage}}>
   <slot />
 </PostLayout>

@@ -6,12 +6,12 @@ import "../styles/global.css";
 export interface Props {
   title: string;
   description: string;
-  image?: string;
+  ogImage?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description } = Astro.props;
+const { title, description, ogImage } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -27,6 +27,17 @@ const { title, description } = Astro.props;
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
+<!-- Open Graph Tags -->
+<meta property="og:title" content={title} />
+{ogImage && <meta property="og:image" content={ogImage} />}
+<meta property="og:type" content="article" />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:description" content={description} />
+<meta property="og:locale" content="en_GB" />
+
+
+
+<!-- Icons -->
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
 <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
@@ -50,6 +61,7 @@ const { title, description } = Astro.props;
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
 <meta name="theme-color" content="#ffffff" />
 
+<!-- Google Tag Manager  -->
 <script
   type="text/partytown"
   src="https://www.googletagmanager.com/gtag/js?id=G-ZKZK92MVND"
