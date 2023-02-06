@@ -20,34 +20,6 @@ const tocDisplay = toc ? "initial" : "none";
     slot="head"
   />
 
-  <!-- <SEO
-    title={`${title} | ${SITE_TITLE}`}
-    description={description}
-    charset="utf-8"
-    slot="head"
-    openGraph={{
-      basic: {
-        title,
-        image: og ?? "https://aidankinzett.com/default-og.png",
-        type: "article",
-      },
-      image: {
-        alt: title,
-      },
-      article: {
-        publishedTime: pubDate?.toISOString?.(),
-        modifiedTime: updatedDate?.toISOString?.(),
-        authors: ["Aidan Kinzett"],
-      },
-    }}
-    twitter={{
-      image: og ?? "https://aidankinzett.com/default-og.png",
-      imageAlt: title,
-      description,
-      title,
-    }}
-  /> -->
-
   <div slot="beneath-header">
     <p class="text-2xl">{title}</p>
     {
