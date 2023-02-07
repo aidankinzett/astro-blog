@@ -14,6 +14,8 @@ Open Graph images are the images that are displayed when you share a link to you
 <meta property="og:image" content="https://picsum.photos/200" />
 ```
 
+If you inspect the source code of this page, you will see that the `og:image` tag is set to [https://aidankinzett.com/og/blog/astro-open-graph-image.png](https://aidankinzett.com/og/blog/astro-open-graph-image.png).
+
 # How to Generate Open Graph Images
 
 We will be using the [astro-og-canvas](https://www.npmjs.com/package/astro-og-canvas) package to generate our images.
