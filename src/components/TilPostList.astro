@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+import BlogPostCard from "./BlogPostCard.astro";
+
+const posts = await getCollection("til");
+---
+
+<ul class="space-y-8">
+  {
+    posts.map((post) => (
+      <BlogPostCard
+        slug={post.slug}
+        title={post.data.title}
+        pubDate={post.data.pubDate}
+        description={post.data.description}
+      />
+    ))
+  }
+</ul>
