@@ -12,11 +12,9 @@ I am a Typescript and React/Next.js developer.
 ### Passions
 
 - Free open source software
-- Open Standards
-- Web standards and technologies
+- Web technologies
 - Typescript
 - React Frameworks
-- Recently I have been looking into the fediverse
 
 ### Contact
 
