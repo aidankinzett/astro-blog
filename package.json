@@ -36,6 +36,6 @@
     "@tailwindcss/typography": "^0.5.9",
     "@types/markdown-it": "^12.2.3",
     "@types/sanitize-html": "^2.8.0",
-    "svgo": "^2.8.0"
+    "svgo": "^3.0.2"
   }
 }
