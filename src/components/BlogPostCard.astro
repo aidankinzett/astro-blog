@@ -2,20 +2,22 @@
 const { slug, title, pubDate, description } = Astro.props;
 ---
 
-<li class="bg-primary-50 hover:bg-primary-100 dark:bg-black dark:hover:bg-gray-900 border-black dark:border-primary-200 border-2">
-  <a href={`/blog/${slug}/`} rel="prefetch">
-    <div class="p-4 hover:cursor-pointer">
-      <div class="underline underline-offset-4 dark:text-primary-200">{title}</div>
-      <time datetime={pubDate.toISOString()} class="font-thin">
-        {
-          pubDate.toLocaleDateString("en-us", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          })
-        }
-      </time>
-      <div class="prose dark:prose-invert">{description}</div>
-    </div>
-  </a>
+<li>
+  <div>
+    <a href={`/blog/${slug}/`} rel="prefetch">
+      <div class="underline underline-offset-4 dark:text-primary-200">
+        {title}
+      </div>
+    </a>
+    <time datetime={pubDate.toISOString()} class="font-thin">
+      {
+        pubDate.toLocaleDateString("en-us", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        })
+      }
+    </time>
+    <div class="prose dark:prose-invert">{description}</div>
+  </div>
 </li>
