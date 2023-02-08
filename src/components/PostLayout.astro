@@ -3,7 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE } from "../consts";
 import BaseLayout from "./BaseLayout.astro";
-import Utterances from "./Utterances.astro";
+import Giscus from "./Giscus.astro";
 
 type Props = CollectionEntry<"blog">["data"] & {
   ogImage?: string;
@@ -60,7 +60,7 @@ const tocDisplay = toc ? "initial" : "none";
   >
     <slot />
   </div>
-  <Utterances />
+  <Giscus />
 </BaseLayout>
 
 <style is:global define:vars={{ tocDisplay }}>
