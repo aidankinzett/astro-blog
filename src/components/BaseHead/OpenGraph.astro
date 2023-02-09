@@ -1,0 +1,19 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+}
+
+const { title, description, ogImage } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content={title} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:type" content="article" />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:description" content={description} />
+<meta property="og:locale" content="en_GB" />

@@ -1,0 +1,23 @@
+---
+// Set the global css here so that it is included on
+// all pages through the use of the <BaseHead /> component.
+---
+
+<style is:global>
+  /* Register our custom font family and tell the browser where to find it. */
+  @font-face {
+    font-family: "BerkleyMono";
+    src: url("/fonts/BerkeleyMonoVariable-Regular.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "BerkleyMono";
+    src: url("/fonts/BerkeleyMonoVariable-Italic.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+  }
+</style>
