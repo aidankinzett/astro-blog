@@ -1,11 +1,9 @@
 ---
-import { Image } from "@astrojs/image/components";
 import BaseHead from "../components/BaseHead.astro";
 import BaseLayout from "../components/BaseLayout.astro";
 import HomePageText from "../components/HomePageText.astro";
 import { SITE_DESCRIPTION,SITE_TITLE } from "../consts";
 
-import aidan from "../../public/aidan.jpeg";
 ---
 
 <BaseLayout>
@@ -30,9 +28,6 @@ import aidan from "../../public/aidan.jpeg";
           > 🏢</span
         >
       </HomePageText>
-    </div>
-    <div>
-      <Image src={aidan} aspectRatio={4/3} height={250} alt="aidan" format="avif"/>
     </div>
   </div>
 </BaseLayout>
