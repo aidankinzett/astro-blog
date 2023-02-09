@@ -3,7 +3,7 @@
  * This Layout is used for rendering posts from the `blog` collection
  */
 import type { CollectionEntry } from "astro:content";
-import PostLayout from "../components/PostLayout.astro";
+import PostLayout from "../components/PostLayout/index.astro";
 
 type Props = CollectionEntry<"blog">["data"] & {
   og?: string;

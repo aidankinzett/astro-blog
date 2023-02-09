@@ -1,0 +1,25 @@
+---
+import CanonicalURL from "./CanonicalURL.astro";
+import Favicons from "./Favicons.astro";
+import GlobalCSS from "./GlobalCSS.astro";
+import GlobalMetadata from "./GlobalMetadata.astro";
+import GoogleTagManager from "./GoogleTagManager.astro";
+import Meta from "./Meta.astro";
+import OpenGraph from "./OpenGraph.astro";
+
+export interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+}
+
+const { title, description, ogImage = "/default-og.png" } = Astro.props;
+---
+
+<GlobalCSS />
+<GlobalMetadata />
+<CanonicalURL />
+<Meta title={title} description={description} />
+<OpenGraph title={title} description={description} ogImage={ogImage} />
+<Favicons />
+<GoogleTagManager />

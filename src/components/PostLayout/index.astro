@@ -1,9 +1,9 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import BaseHead from "../components/BaseHead.astro";
-import { SITE_TITLE } from "../consts";
-import BaseLayout from "./BaseLayout.astro";
-import Giscus from "./Giscus.astro";
+import BaseHead from "../../components/BaseHead/index.astro";
+import { SITE_TITLE } from "../../consts";
+import BaseLayout from "../BaseLayout.astro";
+import Giscus from "../Giscus.astro";
 
 type Props = CollectionEntry<"blog">["data"] & {
   ogImage?: string;
@@ -65,13 +65,7 @@ const tocDisplay = toc ? "initial" : "none";
 
 <style is:global define:vars={{ tocDisplay }}>
   .toc {
+    /* this enables the toc boolean in the frontmatter */
     display: var(--tocDisplay);
-  }
-
-  :not(pre) > code {
-    background-color: theme("colors.primary.100");
-    color: theme("colors.primary.800") !important;
-    border-radius: 0.25rem;
-    padding: 0.1rem 0.25rem;
   }
 </style>
