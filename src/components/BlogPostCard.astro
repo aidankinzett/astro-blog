@@ -5,11 +5,13 @@ const { slug, title, pubDate, description } = Astro.props;
 <li>
   <div>
     <a href={`/blog/${slug}/`} rel="prefetch">
-      <div class="underline underline-offset-4 dark:text-primary-200">
+      <div
+        class="underline underline-offset-4 dark:text-primary-200 text-xl mb-2"
+      >
         {title}
       </div>
     </a>
-    <time datetime={pubDate.toISOString()} class="font-thin">
+    <time datetime={pubDate.toISOString()} class="font-thin mb-1">
       {
         pubDate.toLocaleDateString("en-us", {
           year: "numeric",
@@ -18,6 +20,11 @@ const { slug, title, pubDate, description } = Astro.props;
         })
       }
     </time>
-    <div class="prose dark:prose-invert">{description}</div>
+    <div class="prose dark:prose-invert mb-1">{description}</div>
+    <a href={`/blog/${slug}/`} rel="prefetch">
+      <div class="underline underline-offset-4 dark:text-primary-200">
+        Read more
+      </div>
+    </a>
   </div>
 </li>
