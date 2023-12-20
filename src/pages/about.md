@@ -19,4 +19,4 @@ I am a Typescript and React/Next.js developer.
 
 ### Contact
 
-You can reach me on [Mastodon](https://aidan.social/@aidan) or by email at [hello@aidankinzett.com](mailto:hello@aidankinzett.com).
+You can reach me on [Mastodon](https://aidan.social/@aidan) or by email at [aidan@kinzett.io](mailto:aidan@kinzett.io).
