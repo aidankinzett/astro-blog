@@ -1,6 +1,7 @@
 import { getCollection } from "astro:content";
 import { SITE_URL } from "../consts";
 
+
 export default async () => {
   const posts = await getCollection("blog", ({ data }) => {
     // Filter out posts that are not published on production
@@ -11,7 +12,9 @@ export default async () => {
     }
   });
 
-  return posts.map((post) => ({
+  const sortedPosts = posts.sort((a, b) =>  b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+  return sortedPosts.map((post) => ({
     ...post,
     data: {
       ...post.data,
