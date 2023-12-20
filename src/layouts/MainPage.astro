@@ -7,7 +7,7 @@ import PostLayout from "../components/PostLayout/index.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate } = Astro.props;
+const { title, description, pubDate, updatedDate } = Astro.props.frontmatter;
 ---
 
 <PostLayout {...{title, description, pubDate, updatedDate}}>

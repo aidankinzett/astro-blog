@@ -5,7 +5,7 @@ import sanitizeHtml from "sanitize-html";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 const parser = new MarkdownIt();
 
-export async function get(context: any) {
+export async function GET(context: any) {
   const posts = await getCollection("blog");
   return rss({
     title: SITE_TITLE,
