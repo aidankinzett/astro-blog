@@ -13,3 +13,27 @@ Expo is good and helps us move quickly. Sometimes we need to add a package which
 Expo config plugins let you perform all the required steps to install a react native package. You can read more about them here. There is also a [GitHub repo](https://github.com/expo/config-plugins) with a collection of config plugins which can provide inspiration for creating new ones.
 
 This blog post will detail how to create an Expo config plugin for the [Sumsub React Native SDK](https://developers.sumsub.com/msdk/plugins/react-native.html). 
+
+# Getting Started
+
+<!-- whatever I did to create the package for IMPT -->
+
+## iOS
+
+<!-- instructions from Sumsub -->
+
+<!-- how that translates to config plugin -->
+
+<!-- talk about the dangerous modification of the podfile -->
+
+<!-- what is a podfile? -->
+
+## Android
+
+<!-- instructions from Sumsub -->
+
+<!-- how that translates to config plugins -->
+
+<!-- what is a maven repository? -->
+
+<!-- the error about the bouncycastle stuff and how it was overcome -->
