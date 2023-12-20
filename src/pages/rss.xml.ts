@@ -6,7 +6,15 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 const parser = new MarkdownIt();
 
 export async function GET(context: any) {
-  const posts = await getCollection("blog");
+  const posts = await getCollection("blog", ({ data }) => {
+    // Filter out posts that are not published on production
+    if (import.meta.env.MODE === "production" && data.draft) {
+      return false;
+    } else {
+      return true;
+    }
+  });
+  
   return rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
