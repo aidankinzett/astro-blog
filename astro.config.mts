@@ -18,14 +18,8 @@ import rehypeToc from "rehype-toc";
 // https://astro.build/config
 
 // https://astro.build/config
-import prefetch from "@astrojs/prefetch";
-
-// https://astro.build/config
 import critters from "astro-critters";
 import { SITE_URL } from "./src/consts";
-
-// https://astro.build/config
-import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
@@ -35,9 +29,10 @@ export default defineConfig({
     }]]
   },
   site: SITE_URL,
+  prefetch: true,
   integrations: [mdx(), sitemap(), tailwind(), compress(), robotsTxt(), partytown({
     config: {
       forward: ["dataLayer.push"]
     }
-  }), prefetch(), critters(), image()]
+  }), critters()]
 });
