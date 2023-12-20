@@ -41,6 +41,9 @@ dependencies:
   astro-robots-txt:
     specifier: ^1.0.0
     version: 1.0.0
+  canvaskit-wasm:
+    specifier: ^0.39.1
+    version: 0.39.1
   hex-rgb:
     specifier: ^5.0.0
     version: 5.0.0
@@ -1261,6 +1264,10 @@ packages:
       - supports-color
     dev: false
 
+  /@webgpu/types@0.1.21:
+    resolution: {integrity: sha512-pUrWq3V5PiSGFLeLxoGqReTZmiiXwY3jRkIG5sLLKjyqNxrwm/04b4nw7LSmGWJcKk59XOM/YRTUwOzo4MMlow==}
+    dev: false
+
   /acorn-jsx@5.3.2(acorn@8.11.2):
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
@@ -1632,6 +1639,12 @@ packages:
 
   /canvaskit-wasm@0.37.2:
     resolution: {integrity: sha512-212imazRF98gLOTiU4JAXM7xDvaknI7jaPtAg4ETXGW5rLQs6pomgIvVPUSfoKnQVTdGgzj+B4e+/u0Da20aGg==}
+    dev: false
+
+  /canvaskit-wasm@0.39.1:
+    resolution: {integrity: sha512-Gy3lCmhUdKq+8bvDrs9t8+qf7RvcjuQn+we7vTVVyqgOVO1UVfHpsnBxkTZw+R4ApEJ3D5fKySl9TU11hmjl/A==}
+    dependencies:
+      '@webgpu/types': 0.1.21
     dev: false
 
   /ccount@2.0.1:
