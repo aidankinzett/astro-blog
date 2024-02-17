@@ -12,13 +12,13 @@ import Header from "./Header.astro";
     {
       Astro.slots["beneath-header"] && (
         <div class="bg-primary-200 dark:bg-black  border-b-black dark:border-b-primary-200 border-b-2 space-y-4 dark:text-primary-200">
-          <div class="max-w-screen-md mx-auto py-16 px-10">
+          <div class="max-w-screen-lg mx-auto py-16 px-10">
             <slot name="beneath-header" />
           </div>
         </div>
       )
     }
-    <main class="max-w-screen-md mx-auto py-16 px-10 space-y-5">
+    <main class="max-w-screen-lg mx-auto py-16 px-10 space-y-5">
       <slot />
     </main>
   </body>
