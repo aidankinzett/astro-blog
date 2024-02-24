@@ -77,8 +77,8 @@ devDependencies:
     specifier: ^12.2.3
     version: 12.2.3
   '@types/sanitize-html':
-    specifier: ^2.8.0
-    version: 2.9.5
+    specifier: ^2.11.0
+    version: 2.11.0
   svgo:
     specifier: ^2.8.0
     version: 2.8.0
@@ -1226,8 +1226,8 @@ packages:
       csstype: 3.1.3
     dev: false
 
-  /@types/sanitize-html@2.9.5:
-    resolution: {integrity: sha512-2Sr1vd8Dw+ypsg/oDDfZ57OMSG2Befs+l2CMyCC5bVSK3CpE7lTB2aNlbbWzazgVA+Qqfuholwom6x/mWd1qmw==}
+  /@types/sanitize-html@2.11.0:
+    resolution: {integrity: sha512-7oxPGNQHXLHE48r/r/qjn7q0hlrs3kL7oZnGj0Wf/h9tj/6ibFyRkNbsDxaBBZ4XUZ0Dx5LGCyDJ04ytSofacQ==}
     dependencies:
       htmlparser2: 8.0.2
     dev: true
