@@ -6,7 +6,7 @@
   "author": "Netlify",
   "license": "MIT",
   "dependencies": {
-    "@netlify/plugin-lighthouse": "4.0.7",
+    "@netlify/plugin-lighthouse": "4.1.1",
     "netlify-plugin-a11y": "0.0.12",
     "netlify-plugin-checklinks": "4.1.1",
     "netlify-plugin-subfont": "6.0.0"
