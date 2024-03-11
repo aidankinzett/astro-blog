@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@astrojs/mdx':
     specifier: ^2.0.1
-    version: 2.1.1(astro@4.4.10)
+    version: 2.1.1(astro@4.4.15)
   '@astrojs/partytown':
     specifier: ^2.0.4
     version: 2.0.4
@@ -22,10 +22,10 @@ dependencies:
     version: 3.1.1
   '@astrojs/tailwind':
     specifier: ^5.1.0
-    version: 5.1.0(astro@4.4.10)(tailwindcss@3.4.1)
+    version: 5.1.0(astro@4.4.15)(tailwindcss@3.4.1)
   astro:
-    specifier: ^4.0.6
-    version: 4.4.10(typescript@5.3.3)
+    specifier: ^4.4.15
+    version: 4.4.15(typescript@5.3.3)
   astro-compress:
     specifier: ^2.2.10
     version: 2.2.11
@@ -37,7 +37,7 @@ dependencies:
     version: 0.8.2
   astro-og-canvas:
     specifier: ^0.4.2
-    version: 0.4.2(astro@4.4.10)
+    version: 0.4.2(astro@4.4.15)
   astro-robots-txt:
     specifier: ^1.0.0
     version: 1.0.0
@@ -126,7 +126,7 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/mdx@2.1.1(astro@4.4.10):
+  /@astrojs/mdx@2.1.1(astro@4.4.15):
     resolution: {integrity: sha512-AgGFdE7HOGmoFooGvMSatkA9FiSKwyVW7ImHot/bXJ6uAbFfu6iG2ht18Cf1pT22Hda/6iSCGWusFvBv0/EnKQ==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
@@ -135,7 +135,7 @@ packages:
       '@astrojs/markdown-remark': 4.2.1
       '@mdx-js/mdx': 3.0.1
       acorn: 8.11.3
-      astro: 4.4.10(typescript@5.3.3)
+      astro: 4.4.15(typescript@5.3.3)
       es-module-lexer: 1.4.1
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -200,13 +200,13 @@ packages:
       zod: 3.22.4
     dev: false
 
-  /@astrojs/tailwind@5.1.0(astro@4.4.10)(tailwindcss@3.4.1):
+  /@astrojs/tailwind@5.1.0(astro@4.4.15)(tailwindcss@3.4.1):
     resolution: {integrity: sha512-BJoCDKuWhU9FT2qYg+fr6Nfb3qP4ShtyjXGHKA/4mHN94z7BGcmauQK23iy+YH5qWvTnhqkd6mQPQ1yTZTe9Ig==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 4.4.10(typescript@5.3.3)
+      astro: 4.4.15(typescript@5.3.3)
       autoprefixer: 10.4.16(postcss@8.4.35)
       postcss: 8.4.35
       postcss-load-config: 4.0.2(postcss@8.4.35)
@@ -1616,13 +1616,13 @@ packages:
       svgo: 2.8.0
     dev: false
 
-  /astro-og-canvas@0.4.2(astro@4.4.10):
+  /astro-og-canvas@0.4.2(astro@4.4.15):
     resolution: {integrity: sha512-OQsH6Gr2HX9ZRHdVy2OcXVBIPI65WvEtLG/60krnphh8d3ldhuAFunymYaNGcrdSZcYgXkHWejbPt//3qaRidA==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
     dependencies:
-      astro: 4.4.10(typescript@5.3.3)
+      astro: 4.4.15(typescript@5.3.3)
       canvaskit-wasm: 0.37.2
       deterministic-object-hash: 2.0.2
       entities: 4.5.0
@@ -1635,8 +1635,8 @@ packages:
       zod: 3.22.4
     dev: false
 
-  /astro@4.4.10(typescript@5.3.3):
-    resolution: {integrity: sha512-8ASYlHPNKJg7F+1mlQts7nU1jZPQGE2xluB4fcdAUvH33BYLEBz/bCxJwLOmfC8Ai2gzs/wTwofwDzqbwjx6Ug==}
+  /astro@4.4.15(typescript@5.3.3):
+    resolution: {integrity: sha512-RTiAnlO8hDp6GqMVvaeJxyuCJhHNEho09lHshMNQBqgRabYPOJGW0HZZrbLRGNOqN9I14ivhZIunYGgAaGQpWw==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
