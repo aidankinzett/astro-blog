@@ -74,7 +74,7 @@ importers:
     devDependencies:
       '@tailwindcss/typography':
         specifier: ^0.5.9
-        version: 0.5.10(tailwindcss@3.4.1)
+        version: 0.5.12(tailwindcss@3.4.1)
       '@types/markdown-it':
         specifier: ^13.0.0
         version: 13.0.7
@@ -766,8 +766,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@tailwindcss/typography@0.5.10':
-    resolution: {integrity: sha512-Pe8BuPJQJd3FfRnm6H0ulKIGoMEQS+Vq01R6M5aCrFB/ccR/shT+0kXLjouGC1gFLm9hopTFN+DMP0pfwRWzPw==}
+  '@tailwindcss/typography@0.5.12':
+    resolution: {integrity: sha512-CNwpBpconcP7ppxmuq3qvaCxiRWnbhANpY/ruH4L5qs2GCiVDJXde/pjj2HWPV1+Q4G9+V/etrwUYopdcjAlyg==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
 
@@ -3575,7 +3575,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.12.0':
     optional: true
 
-  '@tailwindcss/typography@0.5.10(tailwindcss@3.4.1)':
+  '@tailwindcss/typography@0.5.12(tailwindcss@3.4.1)':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
