@@ -39,8 +39,8 @@ importers:
         specifier: ^0.8.2
         version: 0.8.2
       astro-og-canvas:
-        specifier: ^0.4.2
-        version: 0.4.2(astro@4.6.2(@types/node@20.12.4)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5))
+        specifier: ^0.5.0
+        version: 0.5.0(astro@4.6.2(@types/node@20.12.4)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5))
       astro-robots-txt:
         specifier: ^1.0.0
         version: 1.0.0
@@ -1019,8 +1019,8 @@ packages:
   astro-icon@0.8.2:
     resolution: {integrity: sha512-+LgbDM6ku760pwoRwc7UfkVKy9V+QiRfZory4KzdMqVOYKyKSM1rmJ3CXcR7mezTd4pKJnH+guxR4ySpcn8fGg==}
 
-  astro-og-canvas@0.4.2:
-    resolution: {integrity: sha512-OQsH6Gr2HX9ZRHdVy2OcXVBIPI65WvEtLG/60krnphh8d3ldhuAFunymYaNGcrdSZcYgXkHWejbPt//3qaRidA==}
+  astro-og-canvas@0.5.0:
+    resolution: {integrity: sha512-nrwZpFL9d6tVJRKV5OLZa3xSSh+Cbaaoay/R9jAgHCrJ79WNyN2rgRT/+wtP1O/bCQ+wVP3GC3mBQN7vogImvg==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
@@ -1133,9 +1133,6 @@ packages:
 
   caniuse-lite@1.0.30001593:
     resolution: {integrity: sha512-UWM1zlo3cZfkpBysd7AS+z+v007q9G1+fLTUU42rQnY6t2axoogPW/xol6T7juU5EUoOhML4WgBIdG+9yYqAjQ==}
-
-  canvaskit-wasm@0.37.2:
-    resolution: {integrity: sha512-212imazRF98gLOTiU4JAXM7xDvaknI7jaPtAg4ETXGW5rLQs6pomgIvVPUSfoKnQVTdGgzj+B4e+/u0Da20aGg==}
 
   canvaskit-wasm@0.39.1:
     resolution: {integrity: sha512-Gy3lCmhUdKq+8bvDrs9t8+qf7RvcjuQn+we7vTVVyqgOVO1UVfHpsnBxkTZw+R4ApEJ3D5fKySl9TU11hmjl/A==}
@@ -4027,10 +4024,10 @@ snapshots:
       resolve-pkg: 2.0.0
       svgo: 2.8.0
 
-  astro-og-canvas@0.4.2(astro@4.6.2(@types/node@20.12.4)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5)):
+  astro-og-canvas@0.5.0(astro@4.6.2(@types/node@20.12.4)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5)):
     dependencies:
       astro: 4.6.2(@types/node@20.12.4)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5)
-      canvaskit-wasm: 0.37.2
+      canvaskit-wasm: 0.39.1
       deterministic-object-hash: 2.0.2
       entities: 4.5.0
 
@@ -4307,8 +4304,6 @@ snapshots:
   caniuse-lite@1.0.30001570: {}
 
   caniuse-lite@1.0.30001593: {}
-
-  canvaskit-wasm@0.37.2: {}
 
   canvaskit-wasm@0.39.1:
     dependencies:
