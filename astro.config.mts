@@ -2,6 +2,7 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
+import icon from "astro-icon";
 
 // https://astro.build/config
 import compress from "astro-compress";
@@ -24,7 +25,7 @@ import { SITE_URL } from "./src/consts";
 // https://astro.build/config
 export default defineConfig({
   markdown: {
-    rehypePlugins: [rehypeSlug, rehypeExternalLinks, [(rehypeToc as any), {
+    rehypePlugins: [(rehypeSlug as any), (rehypeExternalLinks as any), [(rehypeToc as any), {
       headings: ["h1", "h2"]
     }]]
   },
@@ -34,5 +35,5 @@ export default defineConfig({
     config: {
       forward: ["dataLayer.push"]
     }
-  })]
+  }), icon()]
 });
