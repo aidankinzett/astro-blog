@@ -43,7 +43,7 @@ importers:
         version: 1.1.0
       astro-og-canvas:
         specifier: ^0.5.0
-        version: 0.5.0(astro@4.10.2(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5))
+        version: 0.5.1(astro@4.10.2(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5))
       astro-robots-txt:
         specifier: ^1.0.0
         version: 1.0.0
@@ -1026,8 +1026,8 @@ packages:
   astro-icon@1.1.0:
     resolution: {integrity: sha512-Nksc09p7UuHeMcPNS9w1pKqRw3+wEmmh0A3FJW+FNXvqaeWI4RLvD1MCWErpY3Z5Cvad317rvLdik/Hg8GEk8Q==}
 
-  astro-og-canvas@0.5.0:
-    resolution: {integrity: sha512-nrwZpFL9d6tVJRKV5OLZa3xSSh+Cbaaoay/R9jAgHCrJ79WNyN2rgRT/+wtP1O/bCQ+wVP3GC3mBQN7vogImvg==}
+  astro-og-canvas@0.5.1:
+    resolution: {integrity: sha512-Xm37vqyMu3kNRU5tm7nheJf2n8+gweuaDX4efMxPSKEggSF8UznvgreOomzAPqDbcs8LM2fQsyOcMbJFtb3aZg==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
@@ -3881,7 +3881,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro-og-canvas@0.5.0(astro@4.10.2(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5)):
+  astro-og-canvas@0.5.1(astro@4.10.2(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5)):
     dependencies:
       astro: 4.10.2(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5)
       canvaskit-wasm: 0.39.1
