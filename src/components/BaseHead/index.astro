@@ -3,9 +3,9 @@ import CanonicalURL from "./CanonicalURL.astro";
 import Favicons from "./Favicons.astro";
 import GlobalCSS from "./GlobalCSS.astro";
 import GlobalMetadata from "./GlobalMetadata.astro";
-import GoogleTagManager from "./GoogleTagManager.astro";
 import Meta from "./Meta.astro";
 import OpenGraph from "./OpenGraph.astro";
+import PostHog from "./posthog.astro";
 
 export interface Props {
   title: string;
@@ -15,11 +15,10 @@ export interface Props {
 
 const { title, description, ogImage = "/default-og.png" } = Astro.props;
 ---
-
+<PostHog />
 <GlobalCSS />
 <GlobalMetadata />
 <CanonicalURL />
 <Meta title={title} description={description} />
 <OpenGraph title={title} description={description} ogImage={ogImage} />
 <Favicons />
-<GoogleTagManager />
